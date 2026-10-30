@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="g" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#bff8ff"/>
+      <stop offset="75%" stop-color="#20d9ff"/>
+      <stop offset="100%" stop-color="#20d9ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#20d9ff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#20d9ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" fill="#02070d"/>
+  <circle cx="256" cy="256" r="230" fill="url(#halo)"/>
+  <circle cx="256" cy="256" r="200" fill="none" stroke="#20d9ff" stroke-width="6" opacity="0.7"/>
+  <circle cx="256" cy="256" r="165" fill="none" stroke="#20d9ff" stroke-width="26" stroke-dasharray="76 28" opacity="0.9"/>
+  <circle cx="256" cy="256" r="125" fill="none" stroke="#7fe9ff" stroke-width="5"/>
+  <circle cx="256" cy="256" r="88" fill="none" stroke="#20d9ff" stroke-width="8"/>
+  <polygon points="256,186 316,290 196,290" fill="none" stroke="#bff8ff" stroke-width="6" opacity="0.5"/>
+  <circle cx="256" cy="256" r="70" fill="url(#g)"/>
+</svg>
