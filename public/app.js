@@ -460,7 +460,7 @@
     const timer = setTimeout(() => controller.abort("timeout"), REQUEST_TIMEOUT_MS);
     try {
       const headers = { "Content-Type": "application/json" };
-      if (settings.token) headers["X-Jarvis-Token"] = settings.token;
+      if (settings.token) headers["X-Jarvis-Token"] = encodeURIComponent(settings.token);
       const res = await fetch(API_URL, {
         method: "POST",
         headers,
@@ -505,6 +505,8 @@
         return "Mes serveurs mettent un temps inhabituel à répondre, Monsieur. Veuillez réessayer.";
       case "unauthorized":
         return "Le code d'accès semble incorrect, Monsieur. Vérifiez les réglages.";
+      case "token_missing":
+        return "Il me faut votre code d'accès, Monsieur. Veuillez le saisir dans les réglages.";
       case "rate_limited":
         return "Je suis momentanément submergé, Monsieur. Accordez-moi un instant.";
       case "config":
@@ -712,7 +714,7 @@
     els.pitchOut.textContent = settings.pitch.toFixed(2);
     saveSettings();
   });
-  els.token.addEventListener("change", () => {
+  els.token.addEventListener("input", () => {
     settings.token = els.token.value.trim();
     saveSettings();
   });

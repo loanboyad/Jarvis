@@ -1,6 +1,6 @@
 // Service worker : met en cache l'interface pour un démarrage instantané
 // et permet l'installation comme application. L'API n'est jamais mise en cache.
-const CACHE = "jarvis-v1";
+const CACHE = "jarvis-v2";
 const SHELL = [
   "./",
   "index.html",
